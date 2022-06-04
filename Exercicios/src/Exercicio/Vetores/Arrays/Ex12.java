@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 /**
  * Criar um vetor A com 10 elementos inteiros.
- * Implementar um programa que defina e escreva a quantidade de elementos
+ * Implementar um programa que defina e escreva a soma de todos os de elementos
  * armazenados neste vetor.
  */
 
-public class Ex11 {
+public class Ex12 {
     public static void main(String[] args){
 
         Scanner scan = new Scanner(System.in);
@@ -20,18 +20,17 @@ public class Ex11 {
             vetorA[i] = scan.nextInt();
         }
 
-        int qtdPares = 0;
+        int soma = 0;
         for (int i=0; i<vetorA.length; i++){
-            if (vetorA[i] % 2 ==0){
-                qtdPares++;
-            }
+            soma += vetorA[i];
         }
+
         System.out.print("Vetor A = ");
         for (int i = 0; i < vetorA.length; i++) {
             System.out.print(vetorA[i] + " ");
         }
         System.out.println();
 
-        System.out.println("Qtd números pares: " + qtdPares);
+        System.out.println("Soma: " + soma);
     }
 }
